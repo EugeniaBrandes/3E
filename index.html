@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora BaZi</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="html2pdf.bundle.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora BaZi</h1>
+        <form id="baziForm">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name">
+            <label for="birthDate">Fecha de nacimiento:</label>
+            <input type="date" id="birthDate" name="birthDate" required>
+            <label for="birthTime">Hora de nacimiento:</label>
+            <input type="time" id="birthTime" name="birthTime">
+            <label><input type="checkbox" id="unknownTime"> Hora desconocida</label>
+            <label for="birthPlace">Lugar de nacimiento (opcional):</label>
+            <input type="text" id="birthPlace" name="birthPlace">
+            <button type="submit">Generar Carta BaZi</button>
+            <button type="button" id="downloadPDF">Descargar Carta en PDF</button>
+        </form>
+        <div id="baziChart">
+            <h2>Carta BaZi</h2>
+            <table>
+                <tr><th></th><th>Hora</th><th>Día</th><th>Mes</th><th>Año</th></tr>
+                <tr><td>Ramas Celeste</td><td></td><td></td><td></td><td></td></tr>
+                <tr><td>Troncos Terrestre</td><td></td><td></td><td></td><td></td></tr>
+                <tr><td>Raíces Ocultas</td><td></td><td></td><td></td><td></td></tr>
+                <tr><td>Deidades</td><td></td><td></td><td></td><td></td></tr>
+            </table>
+        </div>
+        <div id="interpretation" style="margin-top: 30px;">
+            <h2>Interpretación del Día Maestro</h2>
+            <p id="dayMasterInfo"></p>
+            <p id="deitiesInfo"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
